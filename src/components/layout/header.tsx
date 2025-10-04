@@ -2,7 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, Mountain } from "lucide-react";
+import Image from "next/image";
+import { Menu } from "lucide-react";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -15,6 +17,8 @@ const navLinks = [
   { href: "#demo", label: "Demo" },
   { href: "#comunidad", label: "Comunidad" },
 ];
+
+const logoImage = PlaceHolderImages.find(img => img.id === 'ande-logo');
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -37,7 +41,16 @@ export default function Header() {
     >
       <div className="container flex h-16 items-center justify-between">
         <Link href="#" className="flex items-center gap-2" prefetch={false}>
-          <Mountain className="h-6 w-6 text-primary" />
+          {logoImage && (
+            <Image
+              src={logoImage.imageUrl}
+              alt={logoImage.description}
+              width={40}
+              height={40}
+              className="rounded-full"
+              data-ai-hint={logoImage.imageHint}
+            />
+          )}
           <span className="font-headline text-lg font-bold text-foreground">
             AndeChain
           </span>
@@ -55,7 +68,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <Button variant="outline" size="sm" className="hidden sm:inline-flex border-primary text-primary hover:bg-primary/10 hover:text-primary">Probar ABOB-Pay</Button>
+          <Button style={{ backgroundColor: 'hsl(var(--chart-4))', color: 'hsl(var(--accent-foreground))' }} className="hidden sm:inline-flex">Probar ABOB-Pay</Button>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
@@ -70,7 +83,16 @@ export default function Header() {
                   className="flex items-center gap-2 text-lg font-semibold"
                   prefetch={false}
                 >
-                  <Mountain className="h-6 w-6 text-primary" />
+                  {logoImage && (
+                    <Image
+                      src={logoImage.imageUrl}
+                      alt={logoImage.description}
+                      width={40}
+                      height={40}
+                      className="rounded-full"
+                      data-ai-hint={logoImage.imageHint}
+                    />
+                  )}
                   <span className="sr-only">AndeChain</span>
                 </Link>
                 {navLinks.map((link) => (

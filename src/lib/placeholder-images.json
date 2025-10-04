@@ -17,6 +17,12 @@
       "description": "A stylized map of Bolivia showing community ambassador locations.",
       "imageUrl": "https://images.unsplash.com/photo-1588551385347-4bacb1e18f22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXAlMjBib2xpdmlhfGVufDB8fHx8MTc1OTYxODY3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "map bolivia"
+    },
+    {
+      "id": "ande-logo",
+      "description": "AndeChain Logo",
+      "imageUrl": "https://images.unsplash.com/photo-1715888258263-48e063165313?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhbmRlYW4lMjBjb2lufGVufDB8fHx8MTcyMDA1NjYwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "andean coin"
     }
   ]
 }

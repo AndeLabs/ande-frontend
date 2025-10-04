@@ -1,6 +1,11 @@
 import Link from "next/link";
-import { Github, Send, Book, Mountain } from "lucide-react";
+import Image from "next/image";
+import { Github, Send, Book } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PlaceHolderImages } from "@/lib/placeholder-images";
+
+const logoImage = PlaceHolderImages.find(img => img.id === 'ande-logo');
+
 
 const DiscordIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -26,7 +31,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col gap-4">
             <Link href="#" className="flex items-center gap-2" prefetch={false}>
-              <Mountain className="h-6 w-6 text-primary" />
+              {logoImage && (
+                <Image
+                  src={logoImage.imageUrl}
+                  alt={logoImage.description}
+                  width={24}
+                  height={24}
+                  className="rounded-full"
+                  data-ai-hint={logoImage.imageHint}
+                />
+              )}
               <span className="font-headline text-lg font-bold">
                 AndeChain
               </span>
