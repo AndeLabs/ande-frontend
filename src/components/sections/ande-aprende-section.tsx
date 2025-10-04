@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { BrainCircuit, BookOpen, Clock, Bot, List, ArrowRight, LoaderCircle } from "lucide-react";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useActionState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 function SubmitButton() {
@@ -31,7 +31,7 @@ function SubmitButton() {
 
 export default function AndeAprendeSection() {
   const initialState: State = { message: null, errors: {} };
-  const [state, dispatch] = useFormState(generatePath, initialState);
+  const [state, dispatch] = useActionState(generatePath, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
 
