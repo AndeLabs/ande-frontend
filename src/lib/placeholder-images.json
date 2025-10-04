@@ -1,3 +1,22 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-animation",
+      "description": "An abstract animation representing the flow of money and data in a blockchain.",
+      "imageUrl": "https://images.unsplash.com/photo-1676799909994-e3f26590eaf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxibG9ja2NoYWluJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzU5NDk4MDQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blockchain abstract"
+    },
+    {
+      "id": "abob-pay-mockup",
+      "description": "A mockup of the ABOB-Pay mobile application interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1480694313141-fce5e697ee25?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxtb2JpbGUlMjBhcHB8ZW58MHx8fHwxNzU5NTg0NTMxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "mobile app"
+    },
+    {
+      "id": "community-map",
+      "description": "A stylized map of Bolivia showing community ambassador locations.",
+      "imageUrl": "https://images.unsplash.com/photo-1588551385347-4bacb1e18f22?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYXAlMjBib2xpdmlhfGVufDB8fHx8MTc1OTYxODY3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "map bolivia"
+    }
+  ]
 }
