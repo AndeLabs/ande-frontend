@@ -55,7 +55,7 @@ export default function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-4">
-          <Button variant="outline" size="sm" className="hidden sm:inline-flex">Probar ABOB-Pay</Button>
+          <Button variant="outline" size="sm" className="hidden sm:inline-flex border-primary text-primary hover:bg-primary/10 hover:text-primary">Probar ABOB-Pay</Button>
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" size="icon" className="md:hidden">
