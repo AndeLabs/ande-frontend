@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Wallet, Target, BrainCircuit, BookMarked, FileCheck, Download } from "lucide-react";
+import { Wallet, Target, BookMarked, FileCheck, Download } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import AndeAprendeSection from "./ande-aprende-section";
 

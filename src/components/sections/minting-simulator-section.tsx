@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
-import { User, Database, Cpu, Coins, ArrowRight, ChevronsRight, TestTube2 } from "lucide-react";
+import { User, Database, Cpu, Coins, ArrowRight, ChevronsRight, TestTube2, BadgePercent } from "lucide-react";
 
 const steps = [
   {
@@ -13,12 +13,12 @@ const steps = [
     description: "El usuario deposita tokens ANDE como colateral en el contrato StabilityEngine."
   },
   {
-    icon: <Cpu className="h-8 w-8" />,
+    icon: <BadgePercent className="h-8 w-8" />,
     title: "Paso 2: Consulta al Oráculo",
     description: "El StabilityEngine consulta al P2POracleV2 para obtener el precio actual y verificado de ANDE."
   },
   {
-    icon: <Database className="h-8 w-8" />,
+    icon: <Cpu className="h-8 w-8" />,
     title: "Paso 3: Acuñación de ABOB",
     description: "Basado en el valor del colateral y el precio del oráculo, el contrato acuña (mints) la cantidad correspondiente de ABOB."
   },

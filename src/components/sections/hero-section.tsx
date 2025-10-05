@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { ShieldCheck, Smartphone, GitBranch, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Smartphone, Layers, ArrowRight } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const heroImage = PlaceHolderImages.find(img => img.id === 'hero-animation');
@@ -18,7 +18,7 @@ const features = [
     description: 'Pagos instantáneos y bimonetarios desde tu celular, sin intermediarios.',
   },
   {
-    icon: <GitBranch className="h-8 w-8 text-primary" />,
+    icon: <Layers className="h-8 w-8 text-primary" />,
     title: 'AndeChain: Transparencia Soberana',
     description: 'Un rollup soberano sobre Celestia que garantiza seguridad y disponibilidad de datos.',
   },

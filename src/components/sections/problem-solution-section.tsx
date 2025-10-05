@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { PiggyBank, Store, Landmark, Cpu, Database, Save } from 'lucide-react';
+import { PiggyBank, Store, Landmark, Layers, FileText, Banknote } from 'lucide-react';
 
 const challenges = [
   {
@@ -8,7 +8,7 @@ const challenges = [
     problem: "Inflación, falta de acceso a herramientas de ahorro y escasa educación financiera.",
     solution: "ABOB permite ahorrar en una moneda estable. Ande-Aprende educa y recompensa el conocimiento.",
     tech: "StabilityEngine, Gamificación",
-    techIcon: <Save className="h-4 w-4 text-muted-foreground" />,
+    techIcon: <Banknote className="h-4 w-4 text-muted-foreground" />,
   },
   {
     icon: <Store className="h-10 w-10 text-primary" />,
@@ -16,7 +16,7 @@ const challenges = [
     problem: "Pagos lentos, comisiones altas y contabilidad informal que dificulta el acceso a crédito.",
     solution: "ABOB-Pay ofrece pagos instantáneos y un libro contable digital inmutable para un historial crediticio on-chain.",
     tech: "Rollup Soberano, Smart Contracts",
-    techIcon: <Database className="h-4 w-4 text-muted-foreground" />,
+    techIcon: <FileText className="h-4 w-4 text-muted-foreground" />,
   },
   {
     icon: <Landmark className="h-10 w-10 text-primary" />,
@@ -24,7 +24,7 @@ const challenges = [
     problem: "Baja inclusión financiera, desconfianza en el sistema y necesidad de modernización.",
     solution: "AndeChain provee una infraestructura transparente, soberana y auditable que fomenta la confianza y la inclusión.",
     tech: "Celestia DA, P2POracle",
-    techIcon: <Cpu className="h-4 w-4 text-muted-foreground" />,
+    techIcon: <Layers className="h-4 w-4 text-muted-foreground" />,
   },
 ];
 
