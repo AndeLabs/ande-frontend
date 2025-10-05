@@ -9,7 +9,7 @@ const tokens = [
 ];
 
 const TokenFlowCard = ({ name, className }: { name: string, className?: string }) => (
-    <div className={`flex items-center justify-center p-4 h-24 w-24 rounded-full border-2 bg-card shadow-lg transform transition-transform hover:scale-110 ${className}`}>
+    <div className={`flex items-center justify-center p-4 h-24 w-24 rounded-full border-4 bg-card shadow-lg transition-transform hover:scale-110 hover:shadow-2xl ${className}`}>
         <span className="font-bold text-lg">{name}</span>
     </div>
 )
@@ -20,7 +20,7 @@ export default function TritokenSystemSection() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            El Sistema Tri-Token
+            El Sistema <span className="text-accent">Tri-Token</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Tres tokens, un ecosistema. La economía de AndeChain está diseñada para la estabilidad, la gobernanza y el crecimiento a largo plazo.
@@ -28,7 +28,7 @@ export default function TritokenSystemSection() {
         </div>
 
         <Card className="mt-12 p-6">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible defaultValue="item-0" className="w-full">
             {tokens.map((token, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
                 <AccordionTrigger className="font-headline text-xl">
@@ -44,7 +44,7 @@ export default function TritokenSystemSection() {
         </Card>
 
         <div className="mt-16 flex flex-col items-center">
-            <h3 className="font-headline text-2xl font-semibold text-center mb-8">Flujo Circular de Valor</h3>
+            <h3 className="font-headline text-2xl font-semibold text-center mb-8 text-primary">Flujo Circular de Valor</h3>
             <div className="relative flex items-center justify-center w-full max-w-lg h-64">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2">
                     <TokenFlowCard name="ANDE" className="border-primary"/>
@@ -56,7 +56,7 @@ export default function TritokenSystemSection() {
                     <TokenFlowCard name="veANDE" className="border-secondary-foreground"/>
                 </div>
                 
-                <RefreshCw className="h-32 w-32 text-primary/10 absolute" />
+                <RefreshCw className="h-32 w-32 text-primary/10 absolute animate-spin [animation-duration:20s]" />
 
                 <ArrowRight className="h-8 w-8 text-muted-foreground absolute left-[28%] top-[35%] -rotate-[60deg]"/>
                 <ArrowRight className="h-8 w-8 text-muted-foreground absolute right-[28%] top-[35%] rotate-[60deg]"/>

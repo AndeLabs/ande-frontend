@@ -42,7 +42,7 @@ export default function MintingSimulatorSection() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Demo: ¿Cómo se crea ABOB?
+            Demo: <span className="text-accent">¿Cómo se crea ABOB?</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Simula el proceso de acuñación de ABOB paso a paso para entender visualmente cómo funciona la magia.
@@ -51,7 +51,7 @@ export default function MintingSimulatorSection() {
 
         <Card className="mt-12 max-w-4xl mx-auto overflow-hidden">
           <CardHeader>
-            <CardTitle>Simulador de Acuñación</CardTitle>
+            <CardTitle className="text-primary">Simulador de Acuñación</CardTitle>
             <CardDescription>Sigue los pasos para ver el flujo de creación de la stablecoin.</CardDescription>
           </CardHeader>
           <CardContent>
@@ -70,7 +70,7 @@ export default function MintingSimulatorSection() {
                 {steps.map((step, index) => (
                     <div key={index} className={`transition-opacity duration-500 ease-in-out ${index === currentStep ? 'opacity-100' : 'opacity-0 absolute top-6 left-6 right-6'}`}>
                         <div className="flex flex-col md:flex-row items-center gap-6 text-center md:text-left">
-                            <div className="flex-shrink-0 text-primary">{React.cloneElement(step.icon, { className: 'h-12 w-12' })}</div>
+                            <div className="flex-shrink-0 text-accent">{React.cloneElement(step.icon, { className: 'h-12 w-12' })}</div>
                             <div>
                                 <h3 className="text-xl font-semibold">{step.title}</h3>
                                 <p className="text-muted-foreground mt-2">{step.description}</p>
@@ -81,7 +81,7 @@ export default function MintingSimulatorSection() {
             </div>
 
             <div className="mt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
-              <Button onClick={handleNext} className="w-full sm:w-auto">
+              <Button onClick={handleNext} className="w-full sm:w-auto bg-primary">
                 {currentStep < steps.length - 1 ? "Siguiente Paso" : "Reiniciar Simulación"} <ChevronsRight className="ml-2 h-4 w-4" />
               </Button>
               <Button variant="outline" className="w-full sm:w-auto bg-accent/10 border-accent text-accent hover:bg-accent/20">

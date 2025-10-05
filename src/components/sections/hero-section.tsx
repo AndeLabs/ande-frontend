@@ -41,7 +41,7 @@ export default function HeroSection() {
       <div className="container relative text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">
-            Soberanía Financiera desde Bolivia: <span className="text-accent">AndeChain + ABOB</span>
+            <span className="text-primary">Soberanía Financiera desde Bolivia:</span> <span className="text-accent">AndeChain + ABOB</span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground sm:text-xl">
             La stablecoin boliviana y el rollup soberano sobre Celestia que abren las puertas a una nueva economía digital.

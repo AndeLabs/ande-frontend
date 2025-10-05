@@ -32,7 +32,7 @@ function SubmitButton() {
 function LearningPathForm({ state, dispatch, formRef }: { state: State; dispatch: (formData: FormData) => void; formRef: React.RefObject<HTMLFormElement> }) {
   return (
     <div className="space-y-6">
-      <h3 className="font-semibold text-xl flex items-center gap-2">
+      <h3 className="font-semibold text-xl flex items-center gap-2 text-primary">
         <Bot className="h-6 w-6 text-accent" /> Cuéntanos sobre ti
       </h3>
       <form action={dispatch} ref={formRef} className="space-y-4">
@@ -86,14 +86,14 @@ function LearningPathForm({ state, dispatch, formRef }: { state: State; dispatch
 function LearningPathResult({ data }: { data: LearningPathOutput | null | undefined }) {
     return (
         <div className="space-y-6">
-            <h3 className="font-semibold text-xl flex items-center gap-2">
+            <h3 className="font-semibold text-xl flex items-center gap-2 text-primary">
                 <List className="h-6 w-6 text-accent" /> Tu ruta personalizada
             </h3>
             {data?.learningPath ? (
                 <Accordion type="single" collapsible className="w-full">
                     {data.learningPath.map((topic, index) => (
                         <AccordionItem key={index} value={`item-${index}`}>
-                            <AccordionTrigger className="font-semibold">{topic.topic}</AccordionTrigger>
+                            <AccordionTrigger className="font-semibold text-primary">{topic.topic}</AccordionTrigger>
                             <AccordionContent className="space-y-4">
                                 <p className="text-muted-foreground">{topic.description}</p>
                                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -101,7 +101,7 @@ function LearningPathResult({ data }: { data: LearningPathOutput | null | undefi
                                     <span>Tiempo estimado: {topic.estimatedTime}</span>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold flex items-center gap-2 text-sm">
+                                    <h4 className="font-semibold flex items-center gap-2 text-sm text-accent">
                                         <BookOpen className="h-4 w-4" />Recursos
                                     </h4>
                                     <ul className="list-disc list-inside mt-2 text-muted-foreground space-y-1">
@@ -164,7 +164,7 @@ export default function AndeAprendeSection() {
             <BrainCircuit className="h-8 w-8" />
           </div>
           <CardTitle className="font-headline text-3xl">
-            <span className="text-primary">Ande</span>-Aprende
+            <span className="text-primary">Ande</span>-<span className="text-accent">Aprende</span>
           </CardTitle>
           <CardDescription className="text-lg">
             Tu ruta de aprendizaje personalizada sobre finanzas y blockchain, impulsada por IA.

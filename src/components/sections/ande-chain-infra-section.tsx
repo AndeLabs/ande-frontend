@@ -23,7 +23,7 @@ export default function AndeChainInfraSection() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Infraestructura: AndeChain
+            Infraestructura: <span className="text-primary">AndeChain</span>
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Construido sobre una base técnica robusta para garantizar soberanía, seguridad y escalabilidad.
@@ -42,13 +42,13 @@ export default function AndeChainInfraSection() {
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="space-y-4">
-                <h3 className="font-headline text-2xl font-semibold">¿Qué es un Rollup Soberano?</h3>
+                <h3 className="font-headline text-2xl font-semibold text-accent">¿Qué es un Rollup Soberano?</h3>
                 <p className="text-muted-foreground">
                     A diferencia de los rollups tradicionales, un rollup soberano como AndeChain maneja su propia secuenciación y liquidación. Esto significa que la comunidad de AndeChain, a través del token ANDE, tiene el control total sobre el futuro de la red, sin depender de otra blockchain para su validez.
                 </p>
             </div>
             <div className="space-y-4">
-                <h3 className="font-headline text-2xl font-semibold">¿Cómo ayuda Celestia?</h3>
+                <h3 className="font-headline text-2xl font-semibold text-accent">¿Cómo ayuda Celestia?</h3>
                 <p className="text-muted-foreground">
                     Celestia actúa como una capa de Disponibilidad de Datos (DA). En lugar de procesar transacciones, Celestia se especializa en asegurar que los datos del rollup de AndeChain estén siempre disponibles para quien los necesite. Esto hace que AndeChain sea más seguro, escalable y económico.
                 </p>
@@ -56,7 +56,7 @@ export default function AndeChainInfraSection() {
         </div>
         
         <div className="mt-16">
-            <h3 className="font-headline text-2xl font-semibold text-center">Contratos Clave</h3>
+            <h3 className="font-headline text-2xl font-semibold text-center text-primary">Contratos Clave</h3>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {contracts.map(contract => (
                     <Card key={contract.name} className="bg-background">

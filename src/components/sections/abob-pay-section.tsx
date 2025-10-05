@@ -8,10 +8,10 @@ import AndeAprendeSection from "./ande-aprende-section";
 const abobPayImage = PlaceHolderImages.find(img => img.id === 'abob-pay-mockup');
 
 const features = [
-  { icon: <Wallet className="h-6 w-6 text-accent" />, title: "Billetera Bimonetaria", description: "Gestiona Bolivianos (Bs) y ABOB en un solo lugar." },
-  { icon: <Target className="h-6 w-6 text-accent" />, title: "Ahorro por Metas", description: "Automatiza tus ahorros y protégelos con stablecoins." },
-  { icon: <BookMarked className="h-6 w-6 text-accent" />, title: "Libro Digital Contable", description: "Registro inmutable de tus transacciones para MYPEs." },
-  { icon: <FileCheck className="h-6 w-6 text-accent" />, title: "Historial Crediticio On-Chain", description: "Construye un perfil financiero auditable y transparente." },
+  { icon: <Wallet className="h-6 w-6 text-primary" />, title: "Billetera Bimonetaria", description: "Gestiona Bolivianos (Bs) y ABOB en un solo lugar." },
+  { icon: <Target className="h-6 w-6 text-primary" />, title: "Ahorro por Metas", description: "Automatiza tus ahorros y protégelos con stablecoins." },
+  { icon: <BookMarked className="h-6 w-6 text-primary" />, title: "Libro Digital Contable", description: "Registro inmutable de tus transacciones para MYPEs." },
+  { icon: <FileCheck className="h-6 w-6 text-primary" />, title: "Historial Crediticio On-Chain", description: "Construye un perfil financiero auditable y transparente." },
 ];
 
 export default function AbobPaySection() {
@@ -35,9 +35,9 @@ export default function AbobPaySection() {
         </div>
         <div className="space-y-8">
           <div>
-            <span className="text-primary font-semibold">La App</span>
+            <span className="text-accent font-semibold">La App</span>
             <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl mt-2">
-              ABOB-Pay: Tu Centro Financiero
+              <span className="text-primary">ABOB-Pay:</span> Tu Centro Financiero
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Una aplicación diseñada para la vida real, que combina la simplicidad de uso con el poder de la tecnología blockchain.
@@ -46,7 +46,7 @@ export default function AbobPaySection() {
           <div className="space-y-6">
             {features.map((feature, index) => (
               <div key={index} className="flex items-start gap-4">
-                <div className="flex-shrink-0 bg-primary/10 text-primary p-3 rounded-full">
+                <div className="flex-shrink-0 bg-primary/10 text-accent p-3 rounded-full">
                   {feature.icon}
                 </div>
                 <div>
