@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, RefreshCw } from "lucide-react";
 
 const tokens = [
@@ -27,25 +27,20 @@ export default function TritokenSystemSection() {
           </p>
         </div>
 
-        <Card className="mt-12">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="w-[150px] font-headline">Token</TableHead>
-                  <TableHead className="w-[150px] font-headline">Rol</TableHead>
-                  <TableHead className="font-headline">Uso Principal</TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {tokens.map((token) => (
-                  <TableRow key={token.token}>
-                    <TableCell className="font-bold font-code text-primary">{token.token}</TableCell>
-                    <TableCell>{token.role}</TableCell>
-                    <TableCell>{token.use}</TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
+        <Card className="mt-12 p-6">
+          <Accordion type="single" collapsible className="w-full">
+            {tokens.map((token, index) => (
+              <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger className="font-headline text-xl">
+                  <span className="font-bold font-code text-primary">{token.token}</span>
+                  <span className="text-muted-foreground font-normal text-lg ml-4">- {token.role}</span>
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground text-base">
+                  {token.use}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </Card>
 
         <div className="mt-16 flex flex-col items-center">
