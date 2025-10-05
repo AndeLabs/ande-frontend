@@ -20,6 +20,7 @@ export default {
         body: ['"Open Sans"', 'sans-serif'],
         headline: ['Poppins', 'sans-serif'],
         code: ['"Source Code Pro"', 'monospace'],
+        subheadline: ['Montserrat', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
