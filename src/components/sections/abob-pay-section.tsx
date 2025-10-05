@@ -37,7 +37,7 @@ export default function AbobPaySection() {
           <div>
             <span className="text-accent font-semibold">La App</span>
             <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl mt-2">
-              <span className="text-primary">ABOB-Pay:</span> Tu Centro Financiero
+              ABOB-Pay: Tu Centro Financiero
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Una aplicación diseñada para la vida real, que combina la simplicidad de uso con el poder de la tecnología blockchain.

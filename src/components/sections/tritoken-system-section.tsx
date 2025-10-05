@@ -20,7 +20,7 @@ export default function TritokenSystemSection() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            El Sistema <span className="text-accent">Tri-Token</span>
+            El Sistema Tri-Token
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Tres tokens, un ecosistema. La economía de AndeChain está diseñada para la estabilidad, la gobernanza y el crecimiento a largo plazo.

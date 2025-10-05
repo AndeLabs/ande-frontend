@@ -34,7 +34,7 @@ export default function ProblemSolutionSection() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
-            <span className="text-primary">El Problema</span> y <span className="text-accent">Nuestra Solución</span>
+            El Problema y Nuestra Solución
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             AndeChain nace para resolver desafíos clave en la economía boliviana a través de tecnología blockchain soberana.

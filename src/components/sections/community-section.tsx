@@ -20,7 +20,7 @@ export default function CommunitySection() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Comunidad y <span className="text-primary">Gobernanza</span>
+            Comunidad y Gobernanza
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             AndeChain es un proyecto de todos y para todos. Fomentamos la adopción, la transparencia y la pertenencia.

@@ -42,7 +42,7 @@ export default function MintingSimulatorSection() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
-            Demo: <span className="text-accent">¿Cómo se crea ABOB?</span>
+            Demo: ¿Cómo se crea ABOB?
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
             Simula el proceso de acuñación de ABOB paso a paso para entender visualmente cómo funciona la magia.

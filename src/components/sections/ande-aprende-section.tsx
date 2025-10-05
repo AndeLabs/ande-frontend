@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useEffect, useRef } from "react";
+import { useActionState, useEffect, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
 import { useToast } from "@/hooks/use-toast";
 import { generatePath, type State, type LearningPathOutput } from "@/app/actions";
@@ -32,7 +32,7 @@ function SubmitButton() {
 function LearningPathForm({ state, dispatch, formRef }: { state: State; dispatch: (formData: FormData) => void; formRef: React.RefObject<HTMLFormElement> }) {
   return (
     <div className="space-y-6">
-      <h3 className="font-semibold text-xl flex items-center gap-2 text-primary">
+      <h3 className="font-semibold text-xl flex items-center gap-2">
         <Bot className="h-6 w-6 text-accent" /> Cuéntanos sobre ti
       </h3>
       <form action={dispatch} ref={formRef} className="space-y-4">
@@ -86,7 +86,7 @@ function LearningPathForm({ state, dispatch, formRef }: { state: State; dispatch
 function LearningPathResult({ data }: { data: LearningPathOutput | null | undefined }) {
     return (
         <div className="space-y-6">
-            <h3 className="font-semibold text-xl flex items-center gap-2 text-primary">
+            <h3 className="font-semibold text-xl flex items-center gap-2">
                 <List className="h-6 w-6 text-accent" /> Tu ruta personalizada
             </h3>
             {data?.learningPath ? (
@@ -129,6 +129,9 @@ export default function AndeAprendeSection() {
   const [state, dispatch] = useActionState(generatePath, initialState);
   const { toast } = useToast();
   const formRef = useRef<HTMLFormElement>(null);
+  
+  // To keep the results displayed even after a re-render
+  const [learningData, setLearningData] = useState<LearningPathOutput | null | undefined>(null);
 
   useEffect(() => {
     if (!state) return;
@@ -152,6 +155,7 @@ export default function AndeAprendeSection() {
             title: "¡Éxito!",
             description: state.message,
         });
+        setLearningData(state.data);
         formRef.current?.reset();
     }
   }, [state, toast]);
@@ -164,7 +168,7 @@ export default function AndeAprendeSection() {
             <BrainCircuit className="h-8 w-8" />
           </div>
           <CardTitle className="font-headline text-3xl">
-            <span className="text-primary">Ande</span>-<span className="text-accent">Aprende</span>
+            Ande-Aprende
           </CardTitle>
           <CardDescription className="text-lg">
             Tu ruta de aprendizaje personalizada sobre finanzas y blockchain, impulsada por IA.
@@ -172,7 +176,7 @@ export default function AndeAprendeSection() {
         </CardHeader>
         <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <LearningPathForm state={state} dispatch={dispatch} formRef={formRef} />
-            <LearningPathResult data={state?.data} />
+            <LearningPathResult data={learningData || state?.data} />
         </CardContent>
       </Card>
     </div>
