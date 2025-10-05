@@ -27,17 +27,17 @@ const features = [
 export default function HeroSection() {
   return (
     <section id="home" className="relative w-full pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
-      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(to_bottom,white_10%,transparent_100%)] dark:bg-grid-slate-700/40"></div>
        {heroImage && (
         <Image
           src={heroImage.imageUrl}
           alt={heroImage.description}
           fill
-          className="absolute inset-0 -z-10 object-cover opacity-10"
+          className="absolute inset-0 -z-10 object-cover"
           data-ai-hint={heroImage.imageHint}
           priority
         />
       )}
+      <div className="absolute inset-0 bg-background/30 dark:bg-background/50"></div>
       <div className="container relative text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-headline text-4xl font-bold tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-7xl">

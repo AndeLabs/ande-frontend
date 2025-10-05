@@ -2,9 +2,9 @@
   "placeholderImages": [
     {
       "id": "hero-animation",
-      "description": "An abstract animation representing the flow of money and data in a blockchain.",
-      "imageUrl": "https://images.unsplash.com/photo-1676799909994-e3f26590eaf5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxibG9ja2NoYWluJTIwYWJzdHJhY3R8ZW58MHx8fHwxNzU5NDk4MDQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
-      "imageHint": "blockchain abstract"
+      "description": "A beautiful andean landscape.",
+      "imageUrl": "/background.jpg",
+      "imageHint": "andean landscape"
     },
     {
       "id": "abob-pay-mockup",
