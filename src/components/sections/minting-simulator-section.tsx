@@ -38,7 +38,7 @@ export default function MintingSimulatorSection() {
   };
 
   return (
-    <section id="demo" className="w-full py-16 md:py-24 bg-gradient-to-b from-light-purple to-background">
+    <section id="demo" className="w-full py-16 md:py-24 bg-band-background">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-accent">

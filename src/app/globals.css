@@ -30,6 +30,7 @@
     --chart-4: 38 100% 74%;
     --light-purple: 261 83% 95%;
     --light-orange: 38 100% 95%;
+    --band-background: 261 100% 88%;
   }
 
   .dark {
@@ -58,6 +59,7 @@
     --chart-4: 38 100% 74%;
     --light-purple: 261 83% 10%;
     --light-orange: 38 100% 10%;
+    --band-background: 261 83% 15%;
   }
 }
 
