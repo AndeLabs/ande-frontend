@@ -1,9 +1,9 @@
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
+import { useFormStatus } from "react-dom";
 import { generatePath, type State } from "@/app/actions";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -59,14 +59,14 @@ export default function AndeAprendeSection() {
           <div className="mx-auto bg-primary/10 text-primary p-3 rounded-full w-fit mb-4">
             <BrainCircuit className="h-8 w-8" />
           </div>
-          <CardTitle className="font-headline text-3xl">Ande-Aprende</CardTitle>
+          <CardTitle className="font-headline text-3xl"><span className='text-primary'>Ande</span>-Aprende</CardTitle>
           <CardDescription className="text-lg">
             Tu ruta de aprendizaje personalizada sobre finanzas y blockchain, impulsada por IA.
           </CardDescription>
         </CardHeader>
         <CardContent className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div className="space-y-6">
-            <h3 className="font-semibold text-xl flex items-center gap-2"><Bot className="h-6 w-6" /> Cuéntanos sobre ti</h3>
+            <h3 className="font-semibold text-xl flex items-center gap-2"><Bot className="h-6 w-6 text-accent" /> Cuéntanos sobre ti</h3>
             <form action={dispatch} ref={formRef} className="space-y-4">
               <div>
                 <Label htmlFor="userProfile">Describe tu perfil</Label>
@@ -97,7 +97,7 @@ export default function AndeAprendeSection() {
                 />
                  <div id="learningGoals-error" aria-live="polite" aria-atomic="true">
                   {state.errors?.learningGoals &&
-                    state.errors.learningGoals.map((error: string) => (
+                    state.errors.learningGoals.map((error: string) =>
                       <p className="mt-1 text-sm text-destructive" key={error}>
                         {error}
                       </p>
@@ -116,7 +116,7 @@ export default function AndeAprendeSection() {
             </form>
           </div>
           <div className="space-y-6">
-             <h3 className="font-semibold text-xl flex items-center gap-2"><List className="h-6 w-6" /> Tu ruta personalizada</h3>
+             <h3 className="font-semibold text-xl flex items-center gap-2"><List className="h-6 w-6 text-accent" /> Tu ruta personalizada</h3>
             {state.data?.learningPath ? (
               <Accordion type="single" collapsible className="w-full">
                 {state.data.learningPath.map((topic, index) => (
