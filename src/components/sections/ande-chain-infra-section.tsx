@@ -19,10 +19,10 @@ const contracts = [
 
 export default function AndeChainInfraSection() {
   return (
-    <section id="andechain" className="w-full py-16 md:py-24 bg-card">
+    <section id="andechain" className="w-full py-16 md:py-24 bg-gradient-to-b from-light-orange to-background">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
+          <h2 className="font-headline text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl text-primary">
             Infraestructura: AndeChain
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -59,7 +59,7 @@ export default function AndeChainInfraSection() {
             <h3 className="font-headline text-2xl font-semibold text-center text-primary">Contratos Clave</h3>
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {contracts.map(contract => (
-                    <Card key={contract.name} className="bg-background">
+                    <Card key={contract.name} className="bg-background/80 backdrop-blur-sm">
                         <CardHeader>
                             <CardTitle className="flex items-center gap-2 text-lg">
                                 <Lock className="h-5 w-5 text-primary" />

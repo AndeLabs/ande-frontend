@@ -30,7 +30,7 @@ const challenges = [
 
 export default function ProblemSolutionSection() {
   return (
-    <section id="problema-solucion" className="w-full py-16 md:py-24 bg-card">
+    <section id="problema-solucion" className="w-full py-16 md:py-24 bg-gradient-to-b from-light-purple to-background">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="font-headline text-3xl font-bold tracking-tight text-foreground sm:text-4xl md:text-5xl">
@@ -42,18 +42,18 @@ export default function ProblemSolutionSection() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {challenges.map((challenge, index) => (
-            <Card key={index} className="flex flex-col">
+            <Card key={index} className="flex flex-col bg-card/80 backdrop-blur-sm">
               <CardHeader>
                 <div className="flex items-center gap-4">
                   {challenge.icon}
-                  <CardTitle className="font-headline text-2xl">{challenge.title}</CardTitle>
+                  <CardTitle className="font-headline text-2xl text-primary">{challenge.title}</CardTitle>
                 </div>
               </CardHeader>
               <CardContent className="flex flex-col flex-grow">
                 <div className="flex-grow">
-                  <h3 className="font-semibold text-primary">Problema</h3>
+                  <h3 className="font-semibold text-accent">Problema</h3>
                   <p className="text-muted-foreground text-sm mt-1">{challenge.problem}</p>
-                  <h3 className="font-semibold text-accent mt-4">Solución</h3>
+                  <h3 className="font-semibold text-primary mt-4">Solución</h3>
                   <p className="text-muted-foreground text-sm mt-1">{challenge.solution}</p>
                 </div>
                 <div className="mt-6 border-t pt-4">

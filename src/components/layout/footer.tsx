@@ -26,7 +26,7 @@ const DiscordIcon = (props: React.SVGProps<SVGSVGElement>) => (
 
 export default function Footer() {
   return (
-    <footer className="bg-card border-t">
+    <footer className="bg-gradient-to-b from-light-orange to-background border-t">
       <div className="container py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="flex flex-col gap-4">
