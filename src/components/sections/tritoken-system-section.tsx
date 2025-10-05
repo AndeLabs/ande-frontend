@@ -9,7 +9,7 @@ const tokens = [
 ];
 
 const TokenFlowCard = ({ name, className }: { name: string, className?: string }) => (
-    <div className={`flex items-center justify-center p-4 h-24 w-24 rounded-full border-2 bg-card ${className}`}>
+    <div className={`flex items-center justify-center p-4 h-24 w-24 rounded-full border-2 bg-card shadow-lg transform transition-transform hover:scale-110 ${className}`}>
         <span className="font-bold text-lg">{name}</span>
     </div>
 )
