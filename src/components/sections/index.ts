@@ -2,6 +2,9 @@
 export { default as HeroSection } from './hero/HeroSection';
 
 // Componentes de características
+export { default as ProductsSection } from './features/ProductsSection';
+export { default as FeaturesTabsSection } from './features/FeaturesTabsSection';
+export { default as EcosystemSection } from './features/EcosystemSection';
 export { default as AbobPaySection } from './features/AbobPaySection';
 export { default as AndeChainInfraSection } from './features/AndeChainInfraSection';
 export { default as CommunitySection } from './features/CommunitySection';

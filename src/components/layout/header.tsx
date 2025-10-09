@@ -14,6 +14,7 @@ import ChainStatus from "@/components/blockchain/ChainStatus";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
 const landingNavLinks = [
+  { href: "#productos", label: "Productos" },
   { href: "#solucion", label: "Solución" },
   { href: "#infraestructura", label: "Infraestructura" },
   { href: "#tokens", label: "Tokens" },
@@ -97,8 +98,10 @@ export default function Header() {
   // Render the full landing page header
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? "bg-background/80 backdrop-blur-sm border-b" : "bg-transparent"
+      className={`sticky top-0 z-50 w-full transition-all duration-500 ${
+        isScrolled
+          ? "bg-background/90 backdrop-blur-md border-b border-border/50 shadow-sm"
+          : "bg-transparent backdrop-blur-none"
       }`}
     >
       <div className="container flex h-16 items-center justify-between">
@@ -106,17 +109,25 @@ export default function Header() {
           {logoImage && <Image src={logoImage.imageUrl} alt={logoImage.description} width={40} height={40} className="rounded-full" />}
           <span className="font-headline text-lg font-bold text-foreground">AndeChain</span>
         </Link>
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-1 text-sm font-medium">
           {landingNavLinks.map((link) => (
-            <Link key={link.href} href={link.href} className="text-foreground/70 transition-colors hover:text-foreground" prefetch={false}>
+            <Link
+              key={link.href}
+              href={link.href}
+              className="relative px-4 py-2 rounded-lg text-foreground/80 transition-all duration-300 hover:text-foreground hover:bg-accent/10 group"
+              prefetch={false}
+            >
               {link.label}
+              <span className="absolute inset-x-2 -bottom-px h-px bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </Link>
           ))}
         </nav>
         <div className="flex items-center gap-4">
             <ConnectWallet />
             <Link href="/dashboard" passHref>
-                <Button>Lanzar dApp</Button>
+                <Button className="bg-accent text-accent-foreground hover:bg-accent/90 transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                    Lanzar dApp
+                </Button>
             </Link>
             <Sheet>
                 <SheetTrigger asChild>

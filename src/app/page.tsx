@@ -1,6 +1,9 @@
 import { PageLayout, SectionWrapper } from '@/components/ui/layouts';
 import {
   HeroSection,
+  ProductsSection,
+  FeaturesTabsSection,
+  EcosystemSection,
   ProblemSolutionSection,
   AbobPaySection,
   AndeChainInfraSection,
@@ -14,8 +17,14 @@ export default function Home() {
       <SectionWrapper id="hero" variant="wide" padding="xl">
         <HeroSection />
       </SectionWrapper>
-      <SectionWrapper id="solucion" background="muted">
+      <SectionWrapper id="productos" background="muted">
+        <ProductsSection />
+      </SectionWrapper>
+      <SectionWrapper id="solucion">
         <ProblemSolutionSection />
+      </SectionWrapper>
+      <SectionWrapper id="caracteristicas" background="muted">
+        <FeaturesTabsSection />
       </SectionWrapper>
       <SectionWrapper id="infraestructura">
         <AndeChainInfraSection />
@@ -26,7 +35,10 @@ export default function Home() {
       <SectionWrapper id="abobpay">
         <AbobPaySection />
       </SectionWrapper>
-      <SectionWrapper id="comunidad" background="muted">
+      <SectionWrapper id="ecosistema" background="muted">
+        <EcosystemSection />
+      </SectionWrapper>
+      <SectionWrapper id="comunidad">
         <CommunitySection />
       </SectionWrapper>
     </PageLayout>
