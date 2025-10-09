@@ -1,13 +1,12 @@
 'use client';
 
-import { Staking } from '@/components/sections/Staking';
+import { StakingWidget } from '@/components/dashboard/StakingWidget';
+import { AndePage } from '@/components/ui/AndePage';
 
 export default function StakingPage() {
   return (
-    <main className="flex-1 space-y-12 md:space-y-24 lg:space-y-32 py-12 md:py-24 lg:py-32">
-      <div className="container">
-        <Staking />
-      </div>
-    </main>
+    <AndePage pageId="staking">
+      <StakingWidget expanded={true} />
+    </AndePage>
   );
 }

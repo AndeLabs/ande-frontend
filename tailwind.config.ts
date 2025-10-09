@@ -23,6 +23,17 @@ export default {
         subheadline: ['Montserrat', 'sans-serif'],
       },
       colors: {
+        /* Colores Ande Labs - Variables CSS Centralizadas */
+        'ande-blue': 'var(--ande-blue)',
+        'ande-orange': 'var(--ande-orange)',
+        'ande-lavender': 'var(--ande-lavender)',
+        'ande-peach': 'var(--ande-peach)',
+        'ande-gray': 'var(--ande-gray-600)',
+        'ande-success': 'var(--ande-success)',
+        'ande-warning': 'var(--ande-warning)',
+        'ande-error': 'var(--ande-error)',
+
+        /* Sistema de diseño principal - Variables CSS */
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -56,9 +67,18 @@ export default {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
+
+        /* Colores Adicionales */
+        'ande-primary': 'hsl(var(--ande-primary))',
+        'ande-secondary': 'hsl(var(--ande-secondary))',
+        'ande-accent': 'hsl(var(--ande-accent))',
+        'ande-highlight': 'hsl(var(--ande-highlight))',
+
+        /* Legacy compatibility */
         'light-purple': 'hsl(var(--light-purple))',
         'light-orange': 'hsl(var(--light-orange))',
         'band-background': 'hsl(var(--band-background))',
+
         chart: {
           '1': 'hsl(var(--chart-1))',
           '2': 'hsl(var(--chart-2))',

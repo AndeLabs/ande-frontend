@@ -7,9 +7,12 @@ import { Wallet, Vote, Lock, Droplets, Wrench, Terminal } from "lucide-react";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
 const navLinks = [
-    { href: "/dashboard", label: "Billetera", icon: Wallet },
-    { href: "/dashboard/governance", label: "Gobernanza", icon: Vote },
+    { href: "/dashboard", label: "Resumen", icon: Wallet },
+    { href: "/dashboard/billetera", label: "Billetera", icon: Wallet },
     { href: "/dashboard/staking", label: "Staking", icon: Lock },
+    { href: "/dashboard/governance", label: "Gobernanza", icon: Vote },
+    { href: "/dashboard/bridge", label: "Bridge", icon: Wrench },
+    { href: "/dashboard/analytics", label: "Analytics", icon: Terminal },
     { href: "/dashboard/faucet", label: "Faucet", icon: Droplets },
     { href: "/dashboard/tools", label: "Herramientas", icon: Wrench },
     { href: "/dashboard/logs", label: "Logs", icon: Terminal },

@@ -1,9 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import Header from '@/components/layout/header';
-import Footer from '@/components/layout/footer';
-import { Sidebar } from '@/components/layout/Sidebar';
+import { DashboardLayout } from '@/components/ui/layouts';
 import { useAccount, useBalance } from 'wagmi';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Info } from 'lucide-react';
@@ -34,18 +32,11 @@ function FaucetHint() {
   );
 }
 
-export default function DashboardLayout({ children }: { children: React.ReactNode }) {
+export default function DashboardLayoutWrapper({ children }: { children: React.ReactNode }) {
   return (
-    <div className="flex min-h-screen w-full bg-background text-foreground">
-      <Sidebar />
-      <div className="flex flex-col flex-1">
-        <Header />
-        <FaucetHint />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
-      </div>
-    </div>
+    <DashboardLayout>
+      <FaucetHint />
+      {children}
+    </DashboardLayout>
   );
 }

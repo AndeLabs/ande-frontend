@@ -2,84 +2,239 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Sistema centralizado de colores Ande Labs */
 @layer base {
   :root {
+    /* Colores principales Ande Labs - Definidos en colores.md */
+    --ande-blue: #2455B8;
+    --ande-orange: #FF9F1C;
+    --ande-lavender: #BFA4FF;
+    --ande-peach: #FFC77D;
+    --ande-gray-50: #F4F4F6;
+    --ande-gray-300: #9A9A9A;
+    --ande-gray-800: #393939;
+
+    /* Colores del sistema - compatibilidad */
     --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+    --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+    --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
-    --primary: 221 68% 43%; /* #2455B8 */
-    --primary-foreground: 210 20% 98%;
-    --secondary: 220 14.3% 95.9%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
-    --accent: 33 100% 56%; /* #FF9F1C */
-    --accent-foreground: 24 9.8% 10%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 221 68% 43%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
     --radius: 0.5rem;
-    --chart-1: 221 68% 43%;
-    --chart-2: 33 100% 56%;
-    --chart-3: 261 83% 85%;
-    --chart-4: 38 100% 74%;
-    --light-purple: 261 83% 95%;
-    --light-orange: 38 100% 95%;
-    --band-background: #E9E1FF;
   }
 
   .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-    --primary: 221 68% 43%; /* #2455B8 */
-    --primary-foreground: 210 20% 98%;
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-    --accent: 33 100% 56%; /* #FF9F1C */
-    --accent-foreground: 24 9.8% 10%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 221 68% 43%;
-    --chart-1: 221 68% 43%;
-    --chart-2: 33 100% 56%;
-    --chart-3: 261 83% 85%;
-    --chart-4: 38 100% 74%;
-    --light-purple: 261 83% 10%;
-    --light-orange: 38 100% 10%;
-    --band-background: #BFA4FF1A;
-  }
-}
+    --ande-blue: #4A7FFF;
+    --ande-orange: #FFB366;
+    --ande-lavender: #D4B5FF;
+    --ande-peach: #FFD6B3;
 
-@layer base {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     scroll-behavior: smooth;
   }
 }
 
 @layer components {
+  /* Colores Ande Labs - Sistema robusto */
+  .text-ande-blue {
+    color: #2455B8;
+  }
+  .text-ande-orange {
+    color: #FF9F1C;
+  }
+  .text-ande-lavender {
+    color: #BFA4FF;
+  }
+  .text-ande-peach {
+    color: #FFC77D;
+  }
+  .text-ande-gray {
+    color: #9A9A9A;
+  }
+
+  /* Background colors Ande Labs */
+  .bg-ande-blue {
+    background-color: #2455B8;
+  }
+  .bg-ande-orange {
+    background-color: #FF9F1C;
+  }
+  .bg-ande-lavender {
+    background-color: #BFA4FF;
+  }
+  .bg-ande-peach {
+    background-color: #FFC77D;
+  }
+  .bg-ande-gray {
+    background-color: #9A9A9A;
+  }
+
+  /* Background colors con opacidad - sintaxis correcta */
+  .bg-ande-blue\/10 {
+    background-color: rgba(36, 85, 184, 0.1);
+  }
+  .bg-ande-orange\/10 {
+    background-color: rgba(255, 159, 28, 0.1);
+  }
+  .bg-ande-lavender\/10 {
+    background-color: rgba(191, 164, 255, 0.1);
+  }
+  .bg-ande-peach\/10 {
+    background-color: rgba(255, 199, 125, 0.1);
+  }
+  .bg-ande-gray\/10 {
+    background-color: rgba(154, 154, 154, 0.1);
+  }
+
+  /* Border colors Ande Labs */
+  .border-ande-blue {
+    border-color: #2455B8;
+  }
+  .border-ande-orange {
+    border-color: #FF9F1C;
+  }
+  .border-ande-lavender {
+    border-color: #BFA4FF;
+  }
+  .border-ande-peach {
+    border-color: #FFC77D;
+  }
+  .border-ande-gray {
+    border-color: #9A9A9A;
+  }
+
+  /* Gradientes Ande Labs - definidos directamente */
+  .ande-gradient-primary {
+    background: linear-gradient(135deg, #2455B8 0%, #FF9F1C 100%);
+  }
+
+  .ande-gradient-secondary {
+    background: linear-gradient(135deg, #BFA4FF 0%, #FFC77D 100%);
+  }
+
+  .ande-gradient-text {
+    background: linear-gradient(135deg, #2455B8 0%, #FF9F1C 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .ande-card-gradient {
+    background: linear-gradient(145deg, rgba(191, 164, 255, 0.1) 0%, rgba(255, 199, 125, 0.05) 100%);
+    border: 1px solid rgba(191, 164, 255, 0.2);
+  }
+
+  /* Sombras Ande Labs - definidas directamente */
+  .shadow-ande-blue {
+    box-shadow: 0 4px 14px 0 rgba(36, 85, 184, 0.3);
+  }
+
+  .shadow-ande-orange {
+    box-shadow: 0 4px 14px 0 rgba(255, 159, 28, 0.3);
+  }
+
+  /* Hover states */
+  .hover\:bg-ande-blue:hover {
+    background-color: #2455B8;
+  }
+  .hover\:bg-ande-orange:hover {
+    background-color: #FF9F1C;
+  }
+  .hover\:bg-ande-blue\/10:hover {
+    background-color: rgba(36, 85, 184, 0.1);
+  }
+  .hover\:bg-ande-orange\/10:hover {
+    background-color: rgba(255, 159, 28, 0.1);
+  }
+
+  /* Dark mode overrides */
+  .dark .text-ande-blue {
+    color: #4A7FFF;
+  }
+  .dark .text-ande-orange {
+    color: #FFB366;
+  }
+  .dark .text-ande-lavender {
+    color: #D4B5FF;
+  }
+  .dark .text-ande-peach {
+    color: #FFD6B3;
+  }
+
+  .dark .bg-ande-blue {
+    background-color: #4A7FFF;
+  }
+  .dark .bg-ande-orange {
+    background-color: #FFB366;
+  }
+  .dark .bg-ande-lavender {
+    background-color: #D4B5FF;
+  }
+  .dark .bg-ande-peach {
+    background-color: #FFD6B3;
+  }
+
+  .dark .border-ande-blue {
+    border-color: #4A7FFF;
+  }
+  .dark .border-ande-orange {
+    border-color: #FFB366;
+  }
+  .dark .border-ande-lavender {
+    border-color: #D4B5FF;
+  }
+  .dark .border-ande-peach {
+    border-color: #FFD6B3;
+  }
+
+  /* Legacy compatibility */
   .band-gradient {
-    background: linear-gradient(180deg, hsl(257, 100%, 94%) 0%, hsl(0, 0%, 100%) 100%);
+    background: linear-gradient(180deg, hsl(251, 100%, 95%) 0%, hsl(0, 0%, 100%) 100%);
   }
   .dark .band-gradient {
-    background: linear-gradient(180deg, rgba(191, 164, 255, 0.1) 0%, hsl(var(--background)) 100%);
+    background: linear-gradient(180deg, rgba(191, 164, 255, 0.05) 0%, hsl(var(--background)) 100%);
   }
 }

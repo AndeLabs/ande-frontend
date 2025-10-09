@@ -1,7 +1,6 @@
 import Header from '@/components/layout/header';
 import Footer from '@/components/layout/footer';
-import { StakingVeANDE } from '@/components/sections/StakingVeANDE';
-import { GovernanceDAO } from '@/components/sections/GovernanceDAO';
+import { StakingSection, GovernanceSection } from '@/components/sections';
 
 export default function GovernancePage() {
   return (
@@ -21,10 +20,10 @@ export default function GovernancePage() {
         </section>
 
         {/* Staking Section */}
-        <StakingVeANDE />
+        <StakingSection />
 
         {/* Governance Section */}
-        <GovernanceDAO />
+        <GovernanceSection />
       </main>
       <Footer />
     </div>
